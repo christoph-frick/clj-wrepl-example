@@ -48,12 +48,9 @@ For more specific REPLs provide additional setup.  E.g. create a config file
 `specter.edn` with additional overrides:
 
 ```clojure
-{:wrepl/init
- [#ig/ref :wrepl.specter/pomegranate
-  #ig/ref :wrepl.specter/in-ns-user
-  #ig/ref :wrepl.specter/use-specter]
+{[:wrepl/append-init :wrepl/init] [#ig/ref :wrepl.specter/pomegranate
+                                   #ig/ref :wrepl.specter/use-specter]
  [:wrepl.specter/pomegranate :wrepl.pomegranate/init] {:coordinates [[com.rpl/specter "1.0.3"]]}
- [:wrepl.specter/in-ns-user :wrepl.init/in-ns] {:ns user}
  [:wrepl.specter/use-specter :wrepl.init/eval] {:expr "(use 'com.rpl.specter)"}}
 ```
 
