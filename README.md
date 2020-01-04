@@ -1,3 +1,6 @@
+**DEPRECATED: This project was used only to combine all the deps;
+`clj-wrepl` now can load its own deps**
+
 # Example setup for [clj-wrepl](https://github.com/christoph-frick/clj-wrepl)
 
 **Note:** Right now the deps are on no public repo.  So you need to install them locally.
